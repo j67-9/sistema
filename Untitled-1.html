@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificación del Alumno</title>
+</head>
+<body>
+    <h2>Calificación del Alumno</h2>
+    <p>La letra correspondiente a la calificación es: <span id="resultado"></span></p>
+
+    <script>
+        function obtenerCalificacion(letra) {
+    let calificacion = parseInt(prompt("Ingrese la calificación del alumno:"));
+
+    if (calificacion >= 90 && calificacion <= 100) {
+        letra.textContent = "A";
+    } else if (calificacion >= 80 && calificacion <= 89) {
+        letra.textContent = "B";
+    } else if (calificacion >= 70 && calificacion <= 79) {
+        letra.textContent = "C";
+    } else if (calificacion >= 60 && calificacion <= 69) {
+        letra.textContent = "D";
+    } else {
+        letra.textContent = "F";
+    }
+}
+
+// Ejemplo de uso:
+let resultado = document.getElementById("resultado");
+obtenerCalificacion(resultado);
+    </script>
+</body>
